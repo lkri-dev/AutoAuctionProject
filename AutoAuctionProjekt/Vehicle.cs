@@ -20,6 +20,7 @@ namespace AutoAuctionProjekt
             this.RegistrationNumber = registrationNumber;
             this.Year = year;
             this.NewPrice = newPrice;
+            this.Towbar = towbar;
             this.KmPerLiter = kmPerLiter;
             this.FuelType = fuelType;
             this.engeryClass = GetEnergyClass();
@@ -86,7 +87,6 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// Engine size field and proberty
         /// </summary>
-
         public virtual double EngineSize
         {
             get { return engineSize; }

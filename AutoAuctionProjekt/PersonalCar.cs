@@ -6,7 +6,8 @@ namespace AutoAuctionProjekt
 {
     abstract class PersonalCar : Vehicle
     {
-        public PersonalCar(string name,
+        public PersonalCar(
+            string name,
             double km,
             string registrationNumber,
             int year,
@@ -16,14 +17,15 @@ namespace AutoAuctionProjekt
             double kmPerLiter,
             fuelTypeEnum fuelType,
             int numberOfSeat,
-            trunkDimentionsStruct trunkDimentions) : base(name, km, registrationNumber, year, newPrice, towbar, kmPerLiter, fuelType)
+            trunkDimentionsStruct trunkDimentions)
+            : base(name, km, registrationNumber, year, newPrice, towbar, kmPerLiter, fuelType)
         {
             this.NumberOfSeat = numberOfSeat;
             this.TrunkDimentions = trunkDimentions;
             this.EngineSize = engineSize;
         }
         /// <summary>
-        /// NumberOfSeat field and proberty
+        /// Number of seat field and proberty
         /// </summary>
         public int NumberOfSeat
         {
@@ -32,7 +34,7 @@ namespace AutoAuctionProjekt
         }
         private int numberOfSeat;
         /// <summary>
-        /// TrunkDimentions field, proberty and struct
+        /// Trunk dimentions field, proberty and struct
         /// </summary>
         public trunkDimentionsStruct TrunkDimentions
         {
@@ -91,7 +93,8 @@ namespace AutoAuctionProjekt
             fuelTypeEnum fuelType,
             int numberOfSeat,
             trunkDimentionsStruct trunkDimentions,
-            bool isofixFittings) : base(name, km, registrationNumber, year, newPrice, towbar, engineSize, kmPerLiter, fuelType, numberOfSeat, trunkDimentions)
+            bool isofixFittings) 
+            : base(name, km, registrationNumber, year, newPrice, towbar, engineSize, kmPerLiter, fuelType, numberOfSeat, trunkDimentions)
         {
             this.IsofixFittings = isofixFittings;
             this.DriversLisence = driversLisenceEnum.B;
@@ -131,7 +134,8 @@ namespace AutoAuctionProjekt
             int numberOfSeat,
             trunkDimentionsStruct trunkDimentions,
             bool safetyBar,
-            double loadCapacity) : base(name, km, registrationNumber, year, newPrice, true, engineSize, kmPerLiter, fuelType, numberOfSeat, trunkDimentions)
+            double loadCapacity) 
+            : base(name, km, registrationNumber, year, newPrice, true, engineSize, kmPerLiter, fuelType, numberOfSeat, trunkDimentions)
         {
             this.SafetyBar = safetyBar;
             this.NumberOfSeat = 2;
