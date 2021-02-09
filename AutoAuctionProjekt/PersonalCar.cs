@@ -15,7 +15,7 @@ namespace AutoAuctionProjekt
             bool towbar,
             double engineSize,
             double kmPerLiter,
-            fuelTypeEnum fuelType,
+            FuelTypeEnum fuelType,
             int numberOfSeat,
             trunkDimentionsStruct trunkDimentions)
             : base(name, km, registrationNumber, year, newPrice, towbar, kmPerLiter, fuelType)
@@ -90,14 +90,14 @@ namespace AutoAuctionProjekt
             bool towbar,
             double engineSize,
             double kmPerLiter,
-            fuelTypeEnum fuelType,
+            FuelTypeEnum fuelType,
             int numberOfSeat,
             trunkDimentionsStruct trunkDimentions,
             bool isofixFittings) 
             : base(name, km, registrationNumber, year, newPrice, towbar, engineSize, kmPerLiter, fuelType, numberOfSeat, trunkDimentions)
         {
             this.IsofixFittings = isofixFittings;
-            this.DriversLisence = driversLisenceEnum.B;
+            this.DriversLisence = DriversLisenceEnum.B;
         }
         /// <summary>
         /// Isofix Fittings field and proberty
@@ -130,7 +130,7 @@ namespace AutoAuctionProjekt
             double newPrice,
             double engineSize,
             double kmPerLiter,
-            fuelTypeEnum fuelType,
+            FuelTypeEnum fuelType,
             int numberOfSeat,
             trunkDimentionsStruct trunkDimentions,
             bool safetyBar,
@@ -143,10 +143,10 @@ namespace AutoAuctionProjekt
             
             if (this.loadCapacity > 750.0)
             {
-                this.DriversLisence = driversLisenceEnum.BE;
+                this.DriversLisence = DriversLisenceEnum.BE;
             } else
             {
-                this.DriversLisence = driversLisenceEnum.B;
+                this.DriversLisence = DriversLisenceEnum.B;
             }
         }
         /// <summary>

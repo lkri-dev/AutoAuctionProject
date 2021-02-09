@@ -15,7 +15,7 @@ namespace AutoAuctionProjekt
             bool towbar,
             double engineSize,
             double kmPerLiter,
-            fuelTypeEnum fuelType) : base(name, km, registrationNumber, year, newPrice, towbar, kmPerLiter, fuelType)
+            FuelTypeEnum fuelType) : base(name, km, registrationNumber, year, newPrice, towbar, kmPerLiter, fuelType)
         {
             throw new NotImplementedException();
         }

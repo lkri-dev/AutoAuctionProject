@@ -13,7 +13,7 @@ namespace AutoAuctionProjekt
             double newPrice,
             bool towbar,
             double kmPerLiter,
-            fuelTypeEnum fuelType)
+            FuelTypeEnum fuelType)
         {
             this.Name = name;
             this.Km = km;
@@ -105,13 +105,13 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// Drivers lisence Enum, field and proberty
         /// </summary>
-        public driversLisenceEnum DriversLisence
+        public DriversLisenceEnum DriversLisence
         {
             get { return driversLisence; }
             set { driversLisence = value; }
         }
-        private driversLisenceEnum driversLisence;
-        public enum driversLisenceEnum
+        private DriversLisenceEnum driversLisence;
+        public enum DriversLisenceEnum
         {
             A,
             B,
@@ -124,13 +124,13 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// NFuel type Enum, field and proberty
         /// </summary>
-        public fuelTypeEnum FuelType
+        public FuelTypeEnum FuelType
         {
             get { return fuelType; }
             set { fuelType = value; }
         }
-        private fuelTypeEnum fuelType;
-        public enum fuelTypeEnum
+        private FuelTypeEnum fuelType;
+        public enum FuelTypeEnum
         {
             Diesel,
             Benzin
@@ -138,12 +138,12 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// Engery class Enum, field and proberty
         /// </summary>
-        public engeryClassEnum EngeryClass
+        public EngeryClassEnum EngeryClass
         {
             get { return engeryClass; }
         }
-        private engeryClassEnum engeryClass;
-        public enum engeryClassEnum
+        private EngeryClassEnum engeryClass;
+        public enum EngeryClassEnum
         {
             A,
             B,
@@ -156,27 +156,27 @@ namespace AutoAuctionProjekt
         /// <returns>
         /// Returns the energy class in engeryClassEnum (A,B,C,D)
         /// </returns>
-        private engeryClassEnum GetEnergyClass ()
+        private EngeryClassEnum GetEnergyClass ()
         {
             if (this.year < 2010)
             {
-                if (this.fuelType is fuelTypeEnum.Diesel)
+                if (this.fuelType is FuelTypeEnum.Diesel)
                 {
                     if (this.kmPerLiter >= 23.0)
                     {
-                        return engeryClassEnum.A;
+                        return EngeryClassEnum.A;
                     }
                     else if (this.kmPerLiter < 23.0 && this.kmPerLiter >= 18.0)
                     {
-                        return engeryClassEnum.B;
+                        return EngeryClassEnum.B;
                     }
                     else if (this.kmPerLiter < 18.0 && this.kmPerLiter >= 13.0)
                     {
-                        return engeryClassEnum.C;
+                        return EngeryClassEnum.C;
                     }
                     else if (this.kmPerLiter < 13.0)
                     {
-                        return engeryClassEnum.D;
+                        return EngeryClassEnum.D;
                     }
                     else
                     {
@@ -187,19 +187,19 @@ namespace AutoAuctionProjekt
                 {
                     if (this.kmPerLiter >= 18.0)
                     {
-                        return engeryClassEnum.A;
+                        return EngeryClassEnum.A;
                     }
                     else if (this.kmPerLiter < 18.0 && this.kmPerLiter >= 14.0)
                     {
-                        return engeryClassEnum.B;
+                        return EngeryClassEnum.B;
                     }
                     else if (this.kmPerLiter < 14.0 && this.kmPerLiter >= 10.0)
                     {
-                        return engeryClassEnum.C;
+                        return EngeryClassEnum.C;
                     }
                     else if (this.kmPerLiter < 10.0)
                     {
-                        return engeryClassEnum.D;
+                        return EngeryClassEnum.D;
                     }
                     else
                     {
@@ -209,23 +209,23 @@ namespace AutoAuctionProjekt
             }
             else
             {
-                if (this.fuelType is fuelTypeEnum.Diesel)
+                if (this.fuelType is FuelTypeEnum.Diesel)
                 {
                     if (this.kmPerLiter >= 25.0)
                     {
-                        return engeryClassEnum.A;
+                        return EngeryClassEnum.A;
                     }
                     else if (this.kmPerLiter < 25.0 && this.kmPerLiter >= 20.0)
                     {
-                        return engeryClassEnum.B;
+                        return EngeryClassEnum.B;
                     }
                     else if (this.kmPerLiter < 20.0 && this.kmPerLiter >= 15.0)
                     {
-                        return engeryClassEnum.C;
+                        return EngeryClassEnum.C;
                     }
                     else if (this.kmPerLiter < 15.0)
                     {
-                        return engeryClassEnum.D;
+                        return EngeryClassEnum.D;
                     }
                     else
                     {
@@ -236,19 +236,19 @@ namespace AutoAuctionProjekt
                 {
                     if (this.kmPerLiter >= 20.0)
                     {
-                        return engeryClassEnum.A;
+                        return EngeryClassEnum.A;
                     }
                     else if (this.kmPerLiter < 20.0 && this.kmPerLiter >= 16.0)
                     {
-                        return engeryClassEnum.B;
+                        return EngeryClassEnum.B;
                     }
                     else if (this.kmPerLiter < 16.0 && this.kmPerLiter >= 12.0)
                     {
-                        return engeryClassEnum.C;
+                        return EngeryClassEnum.C;
                     }
                     else if (this.kmPerLiter < 12.0)
                     {
-                        return engeryClassEnum.D;
+                        return EngeryClassEnum.D;
                     }
                     else
                     {
