@@ -4,8 +4,10 @@ using System.Text;
 
 namespace AutoAuctionProjekt
 {
-    public interface BuyerModel
+    public interface ISeller
     {
+        int Zipcode { get; set; }
 
+        string BidNodification();
     }
 }

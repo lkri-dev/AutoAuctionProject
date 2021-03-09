@@ -13,12 +13,20 @@ køber og sælger som interfaces
 
 privat og company som klasser
  */
-    abstract class User : BuyerModel, SellerModel
+    abstract class User : IBuyer, ISeller
     {
+        protected User()
+        {
+            this.balance = 0.00M;
+        }
         private decimal balance;
 
-        public int Postnummer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Zipcode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        /// <summary>
+        /// Gives the seller a nodifikatsion that a bid has been made on a veihcle for sale.
+        /// </summary>
+        /// <returns>the nodifikation as a string.</returns>
         public string BidNodification()
         {
             throw new NotImplementedException();

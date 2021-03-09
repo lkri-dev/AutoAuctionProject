@@ -260,6 +260,7 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// Returns the vehicle in a string with relivant information.
         /// </summary>
+        /// <returns>The Veihcle as a string</returns>
         public new virtual string ToString()
         {
             return String.Format("{0}: {1}\t {2}: {3} km\t {4}: {5}\t {6}: {7}\t {8}: {9}\t {10}: {11}\t {12}: {13} km/L\t {14}: {15}\t {16}: {17}\t {18}: {19}",

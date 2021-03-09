@@ -15,11 +15,18 @@ namespace AutoAuctionProjekt
             ProfessionalPersonalCar p = new ProfessionalPersonalCar("Suzuki Swift", 500.0, "XY12345", 2012, 10000.0, 10.0, 20.0, Vehicle.FuelTypeEnum.Benzin, 2, td, true, 400.0);
             Console.WriteLine(p.ToString() + "\n");
 
-            List<Vehicle> v = new List<Vehicle>();
-            foreach (Vehicle vi in v)
+            AuctionHouse A = new AuctionHouse();
+            A.vehicles.Add(p);
+            foreach (Vehicle vi in A.vehicles)
             {
 
             }
+
+            // User implementation
+            User user1 = new PrivateUser();
+
+            A.SetForSale(user1);
+            A.SetForSale(user1, user1.BidNodification);
         }
     }
 }

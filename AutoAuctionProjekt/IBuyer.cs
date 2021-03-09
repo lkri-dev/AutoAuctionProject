@@ -4,10 +4,8 @@ using System.Text;
 
 namespace AutoAuctionProjekt
 {
-    public interface SellerModel
+    public interface IBuyer
     {
-        int Postnummer { get; set; }
 
-        string BidNodification();
     }
 }

@@ -108,9 +108,7 @@ namespace AutoAuctionProjekt
             set { isofixFittings = value; }
         }
         private bool isofixFittings;
-        /// <summary>
-        /// Returns the PrivatePersonalCar in a string with relivant information.
-        /// </summary>
+        // Returns the PrivatePersonalCar in a string with relivant information.
         public override string ToString()
         {
             return base.ToString() + String.Format("\t {0}: {1}",
@@ -170,6 +168,7 @@ namespace AutoAuctionProjekt
         /// <summary>
         /// Returns the ProfessionalPersonalCar in a string with relivant information.
         /// </summary>
+        /// <returns>The Veihcle as a string</returns>
         public override string ToString()
         {
             return base.ToString() + String.Format("\t {0}: {1}\t {2}: {3}",
